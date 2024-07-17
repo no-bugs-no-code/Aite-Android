@@ -28,5 +28,14 @@
         android:id="@+id/isChangeRefrigeratorFragment"
         android:name="hanaoka.hikikomori.uz.refrigerator.IsChangeRefrigeratorFragment"
         android:label="fragment_is_change_refrigerator"
-        tools:layout="@layout/fragment_is_change_refrigerator" />
+        tools:layout="@layout/fragment_is_change_refrigerator" >
+        <action
+            android:id="@+id/action_isChangeRefrigeratorFragment_to_nextFragment"
+            app:destination="@id/nextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nextFragment"
+        android:name="hanaoka.hikikomori.uz.UpdateRefegiratiorFragment"
+        android:label="fragment_next"
+        tools:layout="@layout/fragment_update_refegiratior" />
 </navigation>

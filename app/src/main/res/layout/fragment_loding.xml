@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LodingFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lotti"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/test"
+        android:layout_marginBottom="40dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendard_semibold"
+        android:text="생성중입니다."
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/lotti"
+        app:layout_constraintStart_toStartOf="@id/lotti"
+        app:layout_constraintEnd_toEndOf="@id/lotti"/>
+
+    <TextView
+        android:id="@+id/tip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tip_content"
+        android:textSize="24sp"
+        android:text="Tip"
+        android:fontFamily="@font/pretendard_semibold"
+        android:textColor="@color/primary"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginBottom="160dp"/>
+    <TextView
+        android:id="@+id/tip_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tip_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:text=" : 필요한 만큼만 요리하세요."
+        android:fontFamily="@font/pretendard_medium"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginBottom="160dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,17 +8,9 @@ import android.view.ViewGroup
 import hanaoka.hikikomori.uz.databinding.FragmentHomeBinding
 import hanaoka.hikikomori.uz.databinding.FragmentLoginBinding
 import hanaoka.hikikomori.uz.databinding.FragmentMenuBinding
+import hanaoka.hikikomori.uz.daymenu.DayMenuAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MenuFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MenuFragment : Fragment() {
 
     private var _binding : FragmentMenuBinding? = null
@@ -31,6 +23,15 @@ class MenuFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         _binding = FragmentMenuBinding.inflate(inflater,container, false)
+        var tes = listOf("0000-00-00","0000-00-00","0000-00-00","0000-00-00","0000-00-00","0000-00-00","0000-00-00","0000-00-00")
+        val adapter = DayMenuAdapter(tes, {pos ->
+            val list = tes.toMutableList()
+            list.removeAt(pos)
+            tes = list
+        })
+        adapter.delete
+        binding.daymenuRecyclerView.adapter = adapter
+
 
         return binding.root
     }

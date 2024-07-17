@@ -4,49 +4,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".refrigerator.IsChangeRefrigeratorFragment">
+    tools:context=".refrigerator.IsChangeRefrigeratorFragment"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/my_refragment_img"
         android:layout_width="0dp"
-        android:layout_height="180dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/title1_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="19dp"
         android:scaleType="fitXY"
         />
     <TextView
         android:id="@+id/title1_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="현재 냉장고를 사용하시겠습니까?\n  냉장고를 갱신 하시겠습니까?"
-        app:layout_constraintTop_toBottomOf="@id/my_refragment_img"
+        android:text="현재 냉장고를 사용하시겠습니까?"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="25dp"
         android:fontFamily="@font/pretendard_semibold"
-
         android:textSize="20sp"
         android:layout_marginTop="30dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/my_refragment_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/select_now_button"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        app:layout_constraintBottom_toTopOf="@id/select_new_button"
+        app:layout_constraintTop_toTopOf="@id/select_new_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/select_new_button"
+        app:layout_constraintEnd_toStartOf="@id/select_new_button"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="30dp"
         android:background="@drawable/sp_green_button_back"
         android:elevation="0dp"
         android:stateListAnimator="@null"
-        android:layout_marginTop="14dp"
 
-        android:text="현재 냉장고로 하기"
+        android:text="사용"
         android:textColor="@color/gray4"
         android:textSize="20sp"
         android:fontFamily="@font/pretendard_semibold"
@@ -57,19 +65,19 @@
         android:layout_width="0dp"
         android:layout_height="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/select_now_button"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="110dp"
-        android:background="@drawable/sp_brown_back_button"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/sp_back_button_stroke"
         android:elevation="0dp"
         android:stateListAnimator="@null"
         android:layout_marginTop="14dp"
 
-        android:textColor="@color/gray4"
+        android:textColor="@color/primary"
         android:textSize="20sp"
-        android:text="냉장고 갱신하기"
+        android:text="갱신"
         android:fontFamily="@font/pretendard_semibold"
         />
 

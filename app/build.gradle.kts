@@ -39,8 +39,8 @@ android {
 }
 
 dependencies {
+    implementation(libs.lottie)
     implementation(libs.tedpermission)
-    implementation(libs.logging.interceptor)
     implementation(libs.gson)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
@@ -52,6 +52,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -155,6 +155,7 @@
         app:layout_constraintStart_toStartOf="@id/signUp_button"
         app:layout_constraintEnd_toEndOf="@id/signUp_button"
         android:text="넘어가기"
+        android:textColor="@color/primary"
         android:padding="22dp"
         android:layout_marginTop="-12dp"
         />

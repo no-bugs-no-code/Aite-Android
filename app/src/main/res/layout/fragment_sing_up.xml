@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="이름을 입력 해 주세요"
-            android:inputType="textPassword" />
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <View
@@ -117,7 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="아이디를 입력 해 주세요"
-            android:inputType="textPassword" />
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -150,7 +150,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="비밀번호를 입력 해 주세요"
-            android:inputType="text" />
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -183,7 +183,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="한번 더 비밀번호를 입력 해 주세요"
-            android:inputType="text" />
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -17,10 +17,10 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater,container, false)
         binding.generateMenuButton.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_isChangeRefrigeratorFragment)
+            findNavController().navigate(R.id.action_homeFragment2_to_isChangeRefrigeratorFragment2)
         }
         return binding.root
     }

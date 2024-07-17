@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="hanaoka.hikikomori.uz.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_isChangeRefrigeratorFragment2"
+            app:destination="@id/isChangeRefrigeratorFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment2"
+        android:name="hanaoka.hikikomori.uz.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/userFragment2"
+        android:name="hanaoka.hikikomori.uz.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/nextFragment2"
+        android:name="hanaoka.hikikomori.uz.UpdateRefegiratiorFragment"
+        android:label="fragment_next"
+        tools:layout="@layout/fragment_update_refegiratior" >
+        <action
+            android:id="@+id/action_nextFragment2_to_lodingFragment"
+            app:destination="@id/lodingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/isChangeRefrigeratorFragment2"
+        android:name="hanaoka.hikikomori.uz.refrigerator.IsChangeRefrigeratorFragment"
+        android:label="fragment_is_change_refrigerator"
+        tools:layout="@layout/fragment_is_change_refrigerator" >
+        <action
+            android:id="@+id/action_isChangeRefrigeratorFragment2_to_nextFragment2"
+            app:destination="@id/nextFragment2" />
+        <action
+            android:id="@+id/action_isChangeRefrigeratorFragment2_to_lodingFragment"
+            app:destination="@id/lodingFragment" />
+        <action
+            android:id="@+id/action_isChangeRefrigeratorFragment2_to_lodingFragment2"
+            app:destination="@id/lodingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lodingFragment"
+        android:name="hanaoka.hikikomori.uz.LodingFragment"
+        android:label="fragment_loding"
+        tools:layout="@layout/fragment_loding" >
+        <action
+            android:id="@+id/action_lodingFragment_to_completedFragment"
+            app:destination="@id/completedFragment" />
+        <action
+            android:id="@+id/action_lodingFragment_to_failFragment"
+            app:destination="@id/failFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completedFragment"
+        android:name="hanaoka.hikikomori.uz.CompletedFragment"
+        android:label="fragment_completed"
+        tools:layout="@layout/fragment_completed" >
+        <action
+            android:id="@+id/action_completedFragment_to_lodingFragment"
+            app:destination="@id/lodingFragment" />
+        <action
+            android:id="@+id/action_completedFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/failFragment"
+        android:name="hanaoka.hikikomori.uz.FailFragment"
+        android:label="fragment_fail"
+        tools:layout="@layout/fragment_fail" >
+        <action
+            android:id="@+id/action_failFragment_to_isChangeRefrigeratorFragment2"
+            app:destination="@id/isChangeRefrigeratorFragment2" />
+        <action
+            android:id="@+id/action_failFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+</navigation>

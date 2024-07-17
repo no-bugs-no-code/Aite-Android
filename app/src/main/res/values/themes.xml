@@ -2,8 +2,14 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.UZ" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
+
     <style name="Theme.UZ" parent="Base.Theme.UZ" />
+
 </resources>
