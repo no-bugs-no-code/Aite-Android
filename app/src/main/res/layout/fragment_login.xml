@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="아이디"
-            android:text="jin"
+            android:text=""
             android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -81,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="비밀번호"
-            android:text="1"
+            android:text=""
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>

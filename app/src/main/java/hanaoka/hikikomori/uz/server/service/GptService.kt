@@ -13,5 +13,9 @@ interface GptService {
     suspend fun getGpt(
         @Body body : ChatGptRequset
     ):gptResponse
+    @POST("/file/upload")
+    suspend fun uploadImage(
+        @Body body: String
+    ) : String
 }
 //192.168.0.24

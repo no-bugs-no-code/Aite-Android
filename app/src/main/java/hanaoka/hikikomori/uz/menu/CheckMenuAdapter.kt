@@ -10,25 +10,26 @@ import hanaoka.hikikomori.uz.databinding.ItemMenuListBinding
 import hanaoka.hikikomori.uz.server.response.DayResponse
 import hanaoka.hikikomori.uz.server.response.MenuResponse
 
-class CheckMenuAdapter(private val menuDataList: DayResponse): RecyclerView.Adapter<CheckMenuAdapter.CheckMenuViewHolder>() {
+class CheckMenuAdapter(private val menuDataList: List<String>): RecyclerView.Adapter<CheckMenuAdapter.CheckMenuViewHolder>() {
     inner class CheckMenuViewHolder(private val binding : ItemMenuListBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(itemData : MenuResponse, pos : Int){
+        fun bind(itemData : String, pos : Int){
+            Log.d("test", "$menuDataList")
             var isLocked : Boolean = false
             if(pos == 0){
-                binding.timelineText.text = itemData.timeLine
-                val adapter : FoodAdapter = FoodAdapter(itemData.menuList!!)
+                binding.timelineText.text = "아침"
+                val adapter : FoodAdapter = FoodAdapter(itemData)
                 adapter.notifyItemRemoved(0)
                 binding.foodRecyclerView.adapter = adapter
             }
             else if(pos == 1){
                 binding.timelineText.text = "점심"
-                val adapter : FoodAdapter = FoodAdapter(itemData.menuList!!)
+                val adapter : FoodAdapter = FoodAdapter(itemData)
                 adapter.notifyItemRemoved(0)
                 binding.foodRecyclerView.adapter = adapter
             }
             else{
                 binding.timelineText.text = "저녁"
-                val adapter : FoodAdapter = FoodAdapter(itemData.menuList!!)
+                val adapter : FoodAdapter = FoodAdapter(itemData)
                 adapter.notifyItemRemoved(0)
                 binding.foodRecyclerView.adapter = adapter
             }
@@ -60,7 +61,7 @@ class CheckMenuAdapter(private val menuDataList: DayResponse): RecyclerView.Adap
     override fun getItemCount(): Int = 3
 
     override fun onBindViewHolder(holder: CheckMenuViewHolder, position: Int) {
-        holder.bind(menuDataList.menus!![position], position)
+        holder.bind(menuDataList[position], position)
     }
 
 }

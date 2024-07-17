@@ -31,9 +31,9 @@ class RetrofitBuilder {
             if (retrofit == null) {
 
                 val client = OkHttpClient.Builder()
-                    .connectTimeout(30, TimeUnit.SECONDS)
-                    .readTimeout(30,TimeUnit.SECONDS)
-                    .writeTimeout(30,TimeUnit.SECONDS)
+                    .connectTimeout(50, TimeUnit.SECONDS)
+                    .readTimeout(50,TimeUnit.SECONDS)
+                    .writeTimeout(50,TimeUnit.SECONDS)
                     .build()
                 retrofit = Retrofit.Builder()
                     .baseUrl(Url.serverUrl)

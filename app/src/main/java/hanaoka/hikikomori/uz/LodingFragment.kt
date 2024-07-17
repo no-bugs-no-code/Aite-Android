@@ -8,11 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import hanaoka.hikikomori.uz.databinding.FragmentLodingBinding
+import hanaoka.hikikomori.uz.refrigerator.RefrigeratorViewModel
 import hanaoka.hikikomori.uz.server.response.ChatGptRequset
 import hanaoka.hikikomori.uz.server.response.Message
 import hanaoka.hikikomori.uz.server.retrofit.RetrofitBuilder
@@ -25,6 +27,7 @@ import retrofit2.HttpException
 class LodingFragment : Fragment() {
     private val foodList : List<String> = listOf("사과", "양파", "계란", "파", "소고기", "소시지", "두리안", "감자", "버섯")
     private var _binding : FragmentLodingBinding? = null
+    private val viewModel by activityViewModels<RefrigeratorViewModel>()
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -60,9 +63,10 @@ class LodingFragment : Fragment() {
                 Log.d("test", "${it.choices}")
                 Log.d("test", "inininininin${it.choices}")
                 launch(Dispatchers.Main) {
-                    viewModel
-                   val p = removeLastLine(it.choices[0].message.content)
-                    Log.d("TAG", " data : ${p.split("-")}")
+                    val p = removeLastLine(it.choices[0].message.content)
+                    viewModel.itemData.value = p.split("\n")
+
+                    Log.d("TAG", " data : ${p.split("\n")}")
                     findNavController().navigate(R.id.action_lodingFragment_to_completedFragment)
                 }
 
