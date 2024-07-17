@@ -6,54 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <TextView
-        android:id="@+id/xText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/oText"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        android:textSize="32dp"
-        android:layout_marginTop="20dp"
-        android:text="X"/>
-    <TextView
-        android:id="@+id/oText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/xText"
-        app:layout_constraintStart_toEndOf="@id/xText"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="32dp"
-        android:text="O"/>
-    <ImageView
-        android:id="@+id/fildImg"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/loginNavView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/uz"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="200dp"
-        />
-
-    <GridView
-        android:id="@+id/gridView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="-50dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        android:numColumns="3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fildImg"
-        />
+        app:navGraph = "@navigation/start_nav"
+        app:defaultNavHost="true" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
