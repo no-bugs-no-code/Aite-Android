@@ -5,5 +5,7 @@
     <color name="primary">#84AE4C</color>
     <color name="gray1">#D9D9D9</color>
     <color name="gray2">#CFCFCF</color>
-    <color name="gray3">#acacac</color>
+    <color name="gray3">#ACACAC</color>
+    <color name="gray4">#FAFAFA</color>
+    <color name="brown">#725050</color>
 </resources>

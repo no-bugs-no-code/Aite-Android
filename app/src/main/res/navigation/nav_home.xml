@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="hanaoka.hikikomori.uz.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_isChangeRefrigeratorFragment"
+            app:destination="@id/isChangeRefrigeratorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="hanaoka.hikikomori.uz.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="hanaoka.hikikomori.uz.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/isChangeRefrigeratorFragment"
+        android:name="hanaoka.hikikomori.uz.refrigerator.IsChangeRefrigeratorFragment"
+        android:label="fragment_is_change_refrigerator"
+        tools:layout="@layout/fragment_is_change_refrigerator" />
+</navigation>

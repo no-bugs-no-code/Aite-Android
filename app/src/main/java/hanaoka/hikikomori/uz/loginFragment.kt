@@ -20,6 +20,9 @@ class loginFragment : Fragment() {
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater,container,false)
         binding.loginButton.setOnClickListener {
+            moveScreen()
+        }
+        binding.signInText.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_singUpFragment)
         }
 

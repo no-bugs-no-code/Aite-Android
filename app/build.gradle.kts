@@ -39,7 +39,12 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.tedpermission)
+    implementation(libs.logging.interceptor)
+    implementation(libs.gson)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
